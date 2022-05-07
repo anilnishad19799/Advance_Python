@@ -1,0 +1,14 @@
+This is for testing
+
+If we have to take all package from site package into virtualenv environment the us this command
+virtualenv --system-site-packages myenv
+
+
+# Important command for solving error
+set -executionpolicy remotesigned
+
+# For generating requirements.txt file and getting all library in requirements.txt 
+pip freeze >requirements.txt
+
+How o install all requirements.txt file 
+pip install -r requirements.txt

@@ -14,17 +14,31 @@ def argsfunction(*args):
 
 
 def kwargfunction(**kwargs):
+    print(type(kwargs))
+    for key,value in kwargs.items():
+        print(key,value)
+
+
+def mxfunction(normal,*args,**kwargs):
+    print(normal)
+
+    for i in args:
+        print(i)
+
     for key,value in kwargs.items():
         print(key,value)
 
 def main():
-    print("For args")
-    list1 = ["Anil",23,4543,55]
-    argsfunction(*list1)
+    # print("For args")
+    list1 = ["Anil",23,4543]
+    # argsfunction(*list1)
     
-    print("For kwargs")
+    # print("For kwargs")
     marklist = {"Anil":99,"Rahul":54,"rohit":99,"Raj":56}
-    kwargfunction(**marklist)
+    # kwargfunction(**marklist)
+
+    normal = "Anil"
+    mxfunction(normal,*list1,**marklist)
 
 
 if __name__=="__main__":
